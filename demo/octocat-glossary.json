@@ -1,0 +1,6 @@
+{
+  "OctoCAT Supply": "The demo supply-chain management application: Express + SQLite API in api/ and React + Vite + Tailwind UI in frontend/.",
+  "Supplier": "OctoCAT Supply domain entity: a company that provides products; linked to products and deliveries.",
+  "Headquarters / Branch": "OctoCAT Supply domain entities: a customer's head office and its branch locations that place orders.",
+  "Order / Order detail / Delivery": "OctoCAT Supply domain flow: branches place orders with line items (order details) that are fulfilled by deliveries."
+}

@@ -1,0 +1,18 @@
+{
+  "name": "octocat-agent-plugins-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Enterprise-ready GitHub Copilot agent plugins (Agent Plugins 1.0) for VS Code, Copilot CLI, and the GitHub Copilot app.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test tests/mcp-servers.test.mjs tests/hooks.test.mjs tests/unit.test.mjs",
+    "validate": "node scripts/validate-plugins.mjs",
+    "sync": "node scripts/sync-shared.mjs",
+    "sync:check": "node scripts/sync-shared.mjs --check",
+    "scan": "node plugins/secure-code/skills/secure-code-review/scripts/scan.mjs --path ."
+  }
+}

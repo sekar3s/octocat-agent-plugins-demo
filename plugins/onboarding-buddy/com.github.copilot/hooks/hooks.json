@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "type": "command",
+        "bash": "node \"${PLUGIN_ROOT}/scripts/hooks/welcome.mjs\" sessionStart",
+        "powershell": "node \"$env:PLUGIN_ROOT/scripts/hooks/welcome.mjs\" sessionStart",
+        "timeoutSec": 15
+      }
+    ],
+    "userPromptSubmitted": [
+      {
+        "type": "command",
+        "bash": "node \"${PLUGIN_ROOT}/scripts/hooks/welcome.mjs\" userPromptSubmitted",
+        "powershell": "node \"$env:PLUGIN_ROOT/scripts/hooks/welcome.mjs\" userPromptSubmitted",
+        "timeoutSec": 5
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "type": "command",
+        "bash": "node \"${PLUGIN_ROOT}/scripts/hooks/release-guard.mjs\" sessionStart",
+        "powershell": "node \"$env:PLUGIN_ROOT/scripts/hooks/release-guard.mjs\" sessionStart",
+        "timeoutSec": 10
+      }
+    ],
+    "preToolUse": [
+      {
+        "type": "command",
+        "bash": "node \"${PLUGIN_ROOT}/scripts/hooks/release-guard.mjs\" preToolUse",
+        "powershell": "node \"$env:PLUGIN_ROOT/scripts/hooks/release-guard.mjs\" preToolUse",
+        "timeoutSec": 10
+      }
+    ]
+  }
+}

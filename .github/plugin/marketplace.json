@@ -1,0 +1,49 @@
+{
+  "name": "octocat-agent-plugins",
+  "owner": {
+    "name": "OctoCAT Platform Team",
+    "email": "platform-team@example.com"
+  },
+  "metadata": {
+    "description": "Enterprise-ready Copilot agent plugins for release readiness, secure coding, and developer onboarding. Works in VS Code, Copilot CLI, and the GitHub Copilot app.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "ship-ready",
+      "description": "Release-readiness copilot: go/no-go checks, semver suggestions, changelog drafts, and guardrails for risky release commands.",
+      "version": "1.0.0",
+      "source": "./plugins/ship-ready",
+      "author": { "name": "OctoCAT Platform Team" },
+      "homepage": "https://github.com/sekar3s/octocat-agent-plugins-demo/tree/main/plugins/ship-ready#readme",
+      "repository": "https://github.com/sekar3s/octocat-agent-plugins-demo",
+      "license": "MIT",
+      "keywords": ["release", "release-readiness", "changelog", "semver", "devops"],
+      "category": "devops"
+    },
+    {
+      "name": "secure-code",
+      "description": "Security guardian: blocks secrets and dangerous commands before they land, scans for OWASP Top 10 patterns, and guides fast, minimal fixes so code ships safely.",
+      "version": "1.0.0",
+      "source": "./plugins/secure-code",
+      "author": { "name": "OctoCAT Platform Team" },
+      "homepage": "https://github.com/sekar3s/octocat-agent-plugins-demo/tree/main/plugins/secure-code#readme",
+      "repository": "https://github.com/sekar3s/octocat-agent-plugins-demo",
+      "license": "MIT",
+      "keywords": ["security", "appsec", "owasp", "secrets", "cwe", "devsecops"],
+      "category": "security"
+    },
+    {
+      "name": "onboarding-buddy",
+      "description": "Day-one onboarding mentor: maps the codebase, verifies your toolchain, finds setup steps and code owners, and suggests a first task so new engineers are productive on day one.",
+      "version": "1.0.0",
+      "source": "./plugins/onboarding-buddy",
+      "author": { "name": "OctoCAT Platform Team" },
+      "homepage": "https://github.com/sekar3s/octocat-agent-plugins-demo/tree/main/plugins/onboarding-buddy#readme",
+      "repository": "https://github.com/sekar3s/octocat-agent-plugins-demo",
+      "license": "MIT",
+      "keywords": ["onboarding", "developer-experience", "documentation", "codeowners", "mentor"],
+      "category": "productivity"
+    }
+  ]
+}

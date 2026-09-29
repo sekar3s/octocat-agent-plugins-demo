@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "vuln-scout": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${PLUGIN_ROOT}/servers/vuln-scout.mjs"],
+      "cwd": "${PLUGIN_ROOT}"
+    }
+  }
+}

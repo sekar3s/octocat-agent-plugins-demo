@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "onboarding-buddy",
+  "version": "1.0.0",
+  "description": "Day-one onboarding mentor: maps the codebase, verifies your toolchain, finds setup steps and code owners, and suggests a first task so new engineers are productive on day one.",
+  "author": {
+    "name": "OctoCAT Platform Team",
+    "url": "https://github.com/sekar3s"
+  },
+  "homepage": "https://github.com/sekar3s/octocat-agent-plugins-demo/tree/main/plugins/onboarding-buddy#readme",
+  "repository": "https://github.com/sekar3s/octocat-agent-plugins-demo",
+  "license": "MIT",
+  "keywords": ["onboarding", "developer-experience", "documentation", "codeowners", "mentor"]
+}

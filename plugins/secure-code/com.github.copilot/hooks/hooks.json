@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "type": "command",
+        "bash": "node \"${PLUGIN_ROOT}/scripts/hooks/security-guard.mjs\" sessionStart",
+        "powershell": "node \"$env:PLUGIN_ROOT/scripts/hooks/security-guard.mjs\" sessionStart",
+        "timeoutSec": 10
+      }
+    ],
+    "preToolUse": [
+      {
+        "type": "command",
+        "bash": "node \"${PLUGIN_ROOT}/scripts/hooks/security-guard.mjs\" preToolUse",
+        "powershell": "node \"$env:PLUGIN_ROOT/scripts/hooks/security-guard.mjs\" preToolUse",
+        "timeoutSec": 10
+      }
+    ],
+    "postToolUse": [
+      {
+        "type": "command",
+        "bash": "node \"${PLUGIN_ROOT}/scripts/hooks/security-guard.mjs\" postToolUse",
+        "powershell": "node \"$env:PLUGIN_ROOT/scripts/hooks/security-guard.mjs\" postToolUse",
+        "timeoutSec": 10
+      }
+    ]
+  }
+}

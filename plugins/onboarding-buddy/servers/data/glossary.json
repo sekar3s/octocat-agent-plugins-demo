@@ -1,0 +1,21 @@
+{
+  "ADR": "Architecture Decision Record — a short markdown document capturing an important technical decision, its context, and consequences.",
+  "Agent plugin": "An installable bundle of Copilot customizations (skills, MCP servers, custom agents, hooks, commands) that works across VS Code, Copilot CLI, and the GitHub Copilot app.",
+  "CI/CD": "Continuous Integration / Continuous Delivery — automated build, test, and deployment pipelines (here: GitHub Actions workflows in .github/workflows).",
+  "CODEOWNERS": "A GitHub file mapping paths to the people or teams automatically requested to review changes to them.",
+  "Codespace": "A cloud-hosted dev environment created from the repository's .devcontainer definition.",
+  "Conventional Commits": "Commit message convention (feat:, fix:, docs:, feat!: …) that enables automatic changelogs and semantic versioning.",
+  "Custom agent": "A Copilot persona defined in an .agent.md file with its own instructions and tool list.",
+  "Dependabot": "GitHub feature that alerts on vulnerable dependencies and opens pull requests to update them.",
+  "DTO": "Data Transfer Object — a typed shape for data moving across an API boundary.",
+  "Feature flag": "A runtime switch that enables or disables functionality without redeploying.",
+  "Hook": "A command Copilot runs at a lifecycle point (session start, before/after a tool call) to add context or enforce policy.",
+  "MCP": "Model Context Protocol — an open protocol that lets AI agents call external tools and data sources through MCP servers.",
+  "Migration": "A versioned, ordered script that changes the database schema (for example api/database/migrations/*.sql).",
+  "Monorepo": "A single repository containing multiple projects (for example api/ and frontend/).",
+  "OpenAPI / Swagger": "A machine-readable description of a REST API, often rendered as interactive docs at /api-docs.",
+  "PR": "Pull request — a proposed change reviewed and merged on GitHub.",
+  "Repository pattern": "A data-access layer that encapsulates queries behind methods such as findAll, findById, create, update, delete.",
+  "Semantic versioning": "MAJOR.MINOR.PATCH versioning: breaking changes bump MAJOR, features bump MINOR, fixes bump PATCH.",
+  "Skill": "A folder with a SKILL.md file (plus optional scripts and references) that Copilot loads on demand for a specialized task."
+}

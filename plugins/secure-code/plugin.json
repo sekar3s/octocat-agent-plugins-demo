@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "secure-code",
+  "version": "1.0.0",
+  "description": "Security guardian: blocks secrets and dangerous commands before they land, scans for OWASP Top 10 patterns, and guides fast, minimal fixes so code ships safely.",
+  "author": {
+    "name": "OctoCAT Platform Team",
+    "url": "https://github.com/sekar3s"
+  },
+  "homepage": "https://github.com/sekar3s/octocat-agent-plugins-demo/tree/main/plugins/secure-code#readme",
+  "repository": "https://github.com/sekar3s/octocat-agent-plugins-demo",
+  "license": "MIT",
+  "keywords": ["security", "appsec", "owasp", "secrets", "cwe", "devsecops"]
+}

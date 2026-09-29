@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ship-ready",
+  "version": "1.0.0",
+  "description": "Release-readiness copilot: go/no-go checks, semver suggestions, changelog drafts, and guardrails for risky release commands.",
+  "author": {
+    "name": "OctoCAT Platform Team",
+    "url": "https://github.com/sekar3s"
+  },
+  "homepage": "https://github.com/sekar3s/octocat-agent-plugins-demo/tree/main/plugins/ship-ready#readme",
+  "repository": "https://github.com/sekar3s/octocat-agent-plugins-demo",
+  "license": "MIT",
+  "keywords": ["release", "release-readiness", "changelog", "semver", "devops"]
+}
