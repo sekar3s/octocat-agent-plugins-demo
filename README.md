@@ -6,11 +6,35 @@
 
 This repository is a **plugin marketplace** with three enterprise-ready GitHub Copilot agent plugins. Each plugin is written once to the open [Agent Plugins 1.0 specification](https://github.com/agentplugins/agent-plugins-spec/blob/main/spec/1.0.0.md) and runs unchanged in **VS Code**, **GitHub Copilot CLI**, and the **GitHub Copilot app**.
 
-| Plugin | Purpose | Skill | Custom agent | MCP server | Hooks | Command | Automation (VS Code) |
-|---|---|---|---|---|---|---|---|
-| [🚀 **ship-ready**](plugins/ship-ready/README.md) | Release readiness: Go/No-Go, semver, changelog, release guardrails | `release-readiness` | `release-captain` | `release-radar` | `sessionStart`, `preToolUse` | `/ship-check` | Weekly release readiness |
-| [🛡️ **secure-code**](plugins/secure-code/README.md) | Security guardian: block secrets and dangerous commands, OWASP scanning, minimal fixes | `secure-code-review` | `security-guardian` | `vuln-scout` | `sessionStart`, `preToolUse`, `postToolUse` | `/security-scan` | Nightly security sweep |
-| [🧭 **onboarding-buddy**](plugins/onboarding-buddy/README.md) | Day-one productivity: repo map, toolchain check, setup, owners, first task | `day-one-setup` | `onboarding-buddy` | `repo-atlas` | `sessionStart`, `userPromptSubmitted` | `/onboard-me` | Daily learning digest |
+### The plugins
+
+| Plugin | What it helps with |
+|---|---|
+| [🚀 **ship-ready**](plugins/ship-ready/README.md) | **Release readiness.** Go/No-Go checks, version suggestions, changelog drafts, and a confirmation step before risky release commands |
+| [🛡️ **secure-code**](plugins/secure-code/README.md) | **Security guardian.** Blocks secrets and dangerous commands, scans for OWASP Top 10 issues, and suggests minimal fixes |
+| [🧭 **onboarding-buddy**](plugins/onboarding-buddy/README.md) | **Day-one productivity.** Maps the repository, checks your toolchain, and finds setup steps, code owners, and a first task |
+
+### What's inside each plugin
+
+Every plugin ships the same six kinds of component:
+
+| Component | 🚀 ship-ready | 🛡️ secure-code | 🧭 onboarding-buddy |
+|---|---|---|---|
+| **Skill** | `release-readiness` | `secure-code-review` | `day-one-setup` |
+| **Custom agent** | `release-captain` | `security-guardian` | `onboarding-buddy` |
+| **MCP server** | `release-radar` | `vuln-scout` | `repo-atlas` |
+| **Hooks** | `sessionStart`<br>`preToolUse` | `sessionStart`<br>`preToolUse`<br>`postToolUse` | `sessionStart`<br>`userPromptSubmitted` |
+| **Slash command** | `/ship-check` | `/security-scan` | `/onboard-me` |
+| **Automation** (VS Code only) | Weekly release readiness | Nightly security sweep | Daily learning digest |
+
+What each component is:
+
+- **Skill:** step-by-step instructions, scripts, and reference files that Copilot loads automatically when your request matches the skill's purpose. Skills are portable across Agent Plugins clients.
+- **Custom agent:** a specialist persona with its own instructions and tool list. Pick it from the agent picker, or run `copilot --agent <plugin>:<agent>` in the CLI.
+- **MCP server:** a small local program that gives Copilot extra tools (for example, "check release artifacts" or "scan for secrets"). All tools here are read-only and work offline. MCP servers are portable across Agent Plugins clients.
+- **Hooks:** scripts that run automatically at set points in a session: when it starts (`sessionStart`), when you send a prompt (`userPromptSubmitted`), and before or after Copilot uses a tool (`preToolUse`, `postToolUse`). They add context, ask for confirmation, or block unsafe actions.
+- **Slash command:** a saved prompt you run by typing `/name` in chat.
+- **Automation:** a reusable prompt with a schedule (daily or weekly) that you can turn on in the VS Code Agents window. Other clients ignore it.
 
 **Enterprise-ready by design:**
 - Zero dependencies. No `npm install`, no network calls, no telemetry. Node.js 18+ and `git` are the only prerequisites.
